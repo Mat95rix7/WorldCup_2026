@@ -8,22 +8,18 @@ import TeamSearchSelect from "@/components/TeamSearchSelect";
 type PenaltyChoice = "NONE" | "HOME" | "AWAY";
 
 const IMPORTANCE_LABELS: Record<keyof typeof MatchImportance, string> = {
-  FRIENDLY_OUTSIDE_FIFA_DAYS: "Amical (hors dates FIFA)",
-  FRIENDLY: "Amical (dates FIFA)",
-  NATIONS_LEAGUE_GROUP_STAGE: "Ligue des Nations (phase de groupes)",
-  NATIONS_LEAGUE_PLAYOFFS_AND_FINALS: "Ligue des Nations (barrages et finales)",
-  QUALIFIERS: "Qualifications Coupe du Monde /  coupes continentales",
-  CONTINENTAL_GROUP_STAGE: "Phase de groupes continentale",
-  CONTINENTAL_FINALS_UP_TO_QF: "Phase finale continentale (jusqu'aux quarts de finale)",
-  CONTINENTAL_FINALS_FROM_QF_OR_CONFED_CUP: "Phase finale continentale (à partir des quarts de finale)",
-  WORLD_CUP_GROUP_STAGE: "Coupe du Monde FIFA (phase de groupes)",
-  WORLD_CUP_UP_TO_QF: "Coupe du Monde FIFA (jusqu'aux quarts de finale)",
-  WORLD_CUP_FROM_QF: "Coupe du Monde FIFA (à partir des quarts de finale)",
+  FRIENDLY_OUTSIDE_FIFA_DAYS: "5 - Amical (hors dates FIFA)",
+  FRIENDLY: "10 - Amical (dates FIFA)",
+  NATIONS_LEAGUE_GROUP_STAGE: "15 - Ligue des Nations (phase de groupes)",
+  NATIONS_LEAGUE_PLAYOFFS_AND_FINALS: "25 - Ligue des Nations (barrages et finales)",
+  QUALIFIERS: "25 - Qualifications Coupe du Monde /  coupes continentales",
+  CONTINENTAL_GROUP_STAGE: "35 - Phase de groupes continentale",
+  CONTINENTAL_FINALS_UP_TO_QF: "35 - Phase finale continentale (jusqu'aux quarts de finale)",
+  CONTINENTAL_FINALS_FROM_QF_OR_CONFED_CUP: "40 - Phase finale continentale (à partir des quarts de finale)",
+  WORLD_CUP_GROUP_STAGE: "50 - Coupe du Monde FIFA (phase de groupes)",
+  WORLD_CUP_UP_TO_QF: "50 - Coupe du Monde FIFA (jusqu'aux quarts de finale)",
+  WORLD_CUP_FROM_QF: "60 - Coupe du Monde FIFA (à partir des quarts de finale)",
 };
-
-  
-
-
 
 export default function FifaMatchCalculator() {
   const [teams, setTeams] = useState<Team[]>([]);
@@ -38,15 +34,36 @@ export default function FifaMatchCalculator() {
   const [penaltyWinner, setPenaltyWinner] =
     useState<PenaltyChoice>("NONE");
 
+  // Points FIFA "actuels" utilisés pour la simulation. Pré-remplis depuis la
+  // base au moment où l'équipe est choisie, mais librement modifiables :
+  // permet de simuler avec un classement à jour même si la donnée stockée
+  // a un peu de retard, sans toucher à la base.
+  const [homePoints, setHomePoints] = useState<number>(0);
+  const [awayPoints, setAwayPoints] = useState<number>(0);
+
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/api/rankings")
+    fetch("/api/teams")
       .then((res) => res.json())
       .then(setTeams)
       .catch(() => setError("Impossible de charger le classement."))
       .finally(() => setIsLoadingTeams(false));
   }, []);
+
+  // Resynchronise le champ éditable avec la base à chaque nouvelle sélection
+  // d'équipe (mais ne touche plus à la valeur si on ne fait que changer le
+  // score ou l'importance ensuite).
+  useEffect(() => {
+    if (home) setHomePoints(home.points);
+  }, [home]);
+
+  useEffect(() => {
+    if (away) setAwayPoints(away.points);
+  }, [away]);
+
+  const homePointsDirty = home !== null && homePoints !== home.points;
+  const awayPointsDirty = away !== null && awayPoints !== away.points;
 
   const isDraw = homeGoals === awayGoals;
 
@@ -60,19 +77,29 @@ export default function FifaMatchCalculator() {
     );
   }, [importance]);
 
-
   const preview = useMemo(() => {
     if (!home || !away) return null;
     return calculateFifaPoints({
-      homePoints: home.points,
-      awayPoints: away.points,
+      homePoints,
+      awayPoints,
       homeGoals,
       awayGoals,
       importance: MatchImportance[importance],
       penaltyWinner: isDraw && penaltyWinner !== "NONE" ? penaltyWinner : null,
       isKnockoutStage,
     });
-  }, [home, away, homeGoals, awayGoals, importance, penaltyWinner, isDraw, isKnockoutStage]);
+  }, [
+    home,
+    away,
+    homePoints,
+    awayPoints,
+    homeGoals,
+    awayGoals,
+    importance,
+    penaltyWinner,
+    isDraw,
+    isKnockoutStage,
+  ]);
 
   const winner =
     homeGoals > awayGoals
@@ -85,12 +112,8 @@ export default function FifaMatchCalculator() {
       ? "away"
       : null;
 
-  // const canValidate = Boolean(home && away);
-
-  const homeDelta =
-    preview && home ? preview.newHomePoints - home.points : null;
-  const awayDelta =
-    preview && away ? preview.newAwayPoints - away.points : null;
+  const homeDelta = preview ? preview.newHomePoints - homePoints : null;
+  const awayDelta = preview ? preview.newAwayPoints - awayPoints : null;
 
   return (
     <div className="min-h-screen bg-[#F5F7F1] text-[#16241A]">
@@ -155,6 +178,34 @@ export default function FifaMatchCalculator() {
                     onChange={setHome}
                     excludeCountryCode={away?.teamCode}
                   />
+
+                  {/* Points FIFA actuels — éditable */}
+                  <label className="mt-3 block">
+                    <span className="flex items-center justify-between mb-1">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#5B6B5F]">
+                        Points FIFA actuels
+                      </span>
+                      {homePointsDirty && (
+                        <button
+                          type="button"
+                          onClick={() => home && setHomePoints(home.points)}
+                          className="text-[10px] font-bold text-[#1B7A3D] hover:underline"
+                        >
+                          ↺ Valeur officielle ({home!.points.toFixed(2)})
+                        </button>
+                      )}
+                    </span>
+                    <input
+                      type="number"
+                      step="0.01"
+                      value={homePoints}
+                      onChange={(e) => setHomePoints(Number(e.target.value))}
+                      disabled={!home}
+                      aria-label="Points FIFA actuels de l'équipe à domicile"
+                      className="w-full rounded-xl bg-[#F5F7F1] border border-[#D8DED2] px-3 py-2 text-center font-display text-lg font-black text-[#16241A] focus:outline-none focus:ring-2 focus:ring-[#1B7A3D] focus:border-[#1B7A3D] disabled:opacity-40"
+                    />
+                  </label>
+
                   <input
                     type="number"
                     min={0}
@@ -199,6 +250,34 @@ export default function FifaMatchCalculator() {
                     onChange={setAway}
                     excludeCountryCode={home?.teamCode}
                   />
+
+                  {/* Points FIFA actuels — éditable */}
+                  <label className="mt-3 block">
+                    <span className="flex items-center justify-between mb-1">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#5B6B5F]">
+                        Points FIFA actuels
+                      </span>
+                      {awayPointsDirty && (
+                        <button
+                          type="button"
+                          onClick={() => away && setAwayPoints(away.points)}
+                          className="text-[10px] font-bold text-[#1B7A3D] hover:underline"
+                        >
+                          ↺ Valeur officielle ({away!.points.toFixed(2)})
+                        </button>
+                      )}
+                    </span>
+                    <input
+                      type="number"
+                      step="0.01"
+                      value={awayPoints}
+                      onChange={(e) => setAwayPoints(Number(e.target.value))}
+                      disabled={!away}
+                      aria-label="Points FIFA actuels de l'équipe à l'extérieur"
+                      className="w-full rounded-xl bg-[#F5F7F1] border border-[#D8DED2] px-3 py-2 text-center font-display text-lg font-black text-[#16241A] focus:outline-none focus:ring-2 focus:ring-[#1B7A3D] focus:border-[#1B7A3D] disabled:opacity-40"
+                    />
+                  </label>
+
                   <input
                     type="number"
                     min={0}
@@ -310,16 +389,6 @@ export default function FifaMatchCalculator() {
                 {error}
               </p>
             )}
-
-            {/* Actions */}
-            {/* <div className="text-center pt-2">
-              <button
-                disabled={!canValidate}
-                className="px-10 py-3.5 rounded-full font-bold uppercase tracking-wide text-sm bg-[#1B7A3D] text-white hover:bg-[#166432] active:bg-[#124F29] transition-colors disabled:opacity-30 disabled:cursor-not-allowed shadow-[0_4px_14px_-4px_rgba(27,122,61,0.5)]"
-              >
-                Valider le résultat
-              </button>
-            </div> */}
           </>
         )}
       </div>

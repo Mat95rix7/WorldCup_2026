@@ -14,7 +14,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Match, Team } from "@/lib/data";
-import { calculateFifaPoints, MatchImportance } from "@/lib/fifa-points";
+import { calculateFifaPoints } from "@/lib/fifa-points";
 
 interface ScoreModalProps {
   match: Match;

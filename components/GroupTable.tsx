@@ -107,11 +107,11 @@ export function GroupTable({ group, standings, compact = false }: GroupTableProp
                 className="w-6 h-4 object-cover rounded-sm flex-shrink-0"
                 loading="lazy"
               />
-              <span className="font-semibold text-[13px] text-stone-800 truncate leading-none">
+              <span className="font-semibold text-[14px] text-stone-800 truncate leading-none py-1">
                 {s.team.teamName}
               </span>
               {badge && (
-                <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded flex-shrink-0 leading-none ${badgeStyle}`}>
+                <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded shrink-0 leading-none ${badgeStyle}`}>
                   {badge}
                 </span>
               )}
@@ -160,11 +160,11 @@ export function GroupTable({ group, standings, compact = false }: GroupTableProp
       {standings.some((s) => s.qualified !== "pending") && (
         <div className="flex items-center gap-4 px-4 py-2.5 bg-stone-50 border-t border-stone-100">
           <span className="flex items-center gap-1.5 text-[10.5px] text-stone-400">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" />
+            <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
             Qualifié direct
           </span>
           <span className="flex items-center gap-1.5 text-[10.5px] text-stone-400">
-            <span className="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0" />
+            <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
             3e — en attente
           </span>
         </div>
