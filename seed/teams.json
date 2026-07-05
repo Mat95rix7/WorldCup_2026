@@ -1,0 +1,2112 @@
+[
+  {
+    "rank": 1,
+    "points": 1916.24,
+    "previousRank": 3,
+    "previousPoints": 1870.7,
+    "teamName": "France",
+    "teamCode": "FRA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/FRA",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 2,
+    "points": 1913.72,
+    "previousRank": 1,
+    "previousPoints": 1877.27,
+    "teamName": "Argentina",
+    "teamCode": "ARG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ARG",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 3,
+    "points": 1892.28,
+    "previousRank": 2,
+    "previousPoints": 1874.71,
+    "teamName": "Spain",
+    "teamCode": "ESP",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ESP",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 4,
+    "points": 1850.97,
+    "previousRank": 4,
+    "previousPoints": 1828.02,
+    "teamName": "England",
+    "teamCode": "ENG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ENG",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 5,
+    "points": 1804.92,
+    "previousRank": 6,
+    "previousPoints": 1765.86,
+    "teamName": "Brazil",
+    "teamCode": "BRA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BRA",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 6,
+    "points": 1788.86,
+    "previousRank": 7,
+    "previousPoints": 1755.1,
+    "teamName": "Morocco",
+    "teamCode": "MAR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MAR",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 7,
+    "points": 1787.85,
+    "previousRank": 5,
+    "previousPoints": 1767.85,
+    "teamName": "Portugal",
+    "teamCode": "POR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/POR",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 8,
+    "points": 1775.54,
+    "previousRank": 8,
+    "previousPoints": 1753.57,
+    "teamName": "Netherlands",
+    "teamCode": "NED",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NED",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 9,
+    "points": 1756.52,
+    "previousRank": 9,
+    "previousPoints": 1742.24,
+    "teamName": "Belgium",
+    "teamCode": "BEL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BEL",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 10,
+    "points": 1754.3,
+    "previousRank": 14,
+    "previousPoints": 1687.48,
+    "teamName": "Mexico",
+    "teamCode": "MEX",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MEX",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 11,
+    "points": 1739.88,
+    "previousRank": 13,
+    "previousPoints": 1698.35,
+    "teamName": "Colombia",
+    "teamCode": "COL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/COL",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 12,
+    "points": 1726.21,
+    "previousRank": 10,
+    "previousPoints": 1735.77,
+    "teamName": "Germany",
+    "teamCode": "GER",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GER",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 13,
+    "points": 1723.05,
+    "previousRank": 11,
+    "previousPoints": 1714.87,
+    "teamName": "Croatia",
+    "teamCode": "CRO",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CRO",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 14,
+    "points": 1704.73,
+    "previousRank": 12,
+    "previousPoints": 1704.73,
+    "teamName": "Italy",
+    "teamCode": "ITA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ITA",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 15,
+    "points": 1696.29,
+    "previousRank": 19,
+    "previousPoints": 1650.06,
+    "teamName": "Switzerland",
+    "teamCode": "SUI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SUI",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 16,
+    "points": 1690.33,
+    "previousRank": 17,
+    "previousPoints": 1671.23,
+    "teamName": "USA",
+    "teamCode": "USA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/USA",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 17,
+    "points": 1673.68,
+    "previousRank": 18,
+    "previousPoints": 1661.58,
+    "teamName": "Japan",
+    "teamCode": "JPN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/JPN",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 18,
+    "points": 1653.43,
+    "previousRank": 15,
+    "previousPoints": 1684.07,
+    "teamName": "Senegal",
+    "teamCode": "SEN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SEN",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 19,
+    "points": 1634.7,
+    "previousRank": 16,
+    "previousPoints": 1673.07,
+    "teamName": "Uruguay",
+    "teamCode": "URU",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/URU",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 20,
+    "points": 1619.47,
+    "previousRank": 21,
+    "previousPoints": 1619.47,
+    "teamName": "Denmark",
+    "teamCode": "DEN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/DEN",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 21,
+    "points": 1617.68,
+    "previousRank": 31,
+    "previousPoints": 1557.44,
+    "teamName": "Norway",
+    "teamCode": "NOR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NOR",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 22,
+    "points": 1609.85,
+    "previousRank": 20,
+    "previousPoints": 1619.58,
+    "teamName": "IR Iran",
+    "teamCode": "IRN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/IRN",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 23,
+    "points": 1598.81,
+    "previousRank": 24,
+    "previousPoints": 1597.4,
+    "teamName": "Austria",
+    "teamCode": "AUT",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/AUT",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 24,
+    "points": 1597.04,
+    "previousRank": 29,
+    "previousPoints": 1562.37,
+    "teamName": "Egypt",
+    "teamCode": "EGY",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/EGY",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 25,
+    "points": 1592.6,
+    "previousRank": 23,
+    "previousPoints": 1598.52,
+    "teamName": "Ecuador",
+    "teamCode": "ECU",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ECU",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 26,
+    "points": 1585.02,
+    "previousRank": 26,
+    "previousPoints": 1585.02,
+    "teamName": "Nigeria",
+    "teamCode": "NGA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NGA",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 27,
+    "points": 1582.55,
+    "previousRank": 22,
+    "previousPoints": 1605.73,
+    "teamName": "Türkiye",
+    "teamCode": "TUR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TUR",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 28,
+    "points": 1581.34,
+    "previousRank": 27,
+    "previousPoints": 1579.34,
+    "teamName": "Australia",
+    "teamCode": "AUS",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/AUS",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 29,
+    "points": 1576.8,
+    "previousRank": 28,
+    "previousPoints": 1571.03,
+    "teamName": "Algeria",
+    "teamCode": "ALG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ALG",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 30,
+    "points": 1571.34,
+    "previousRank": 30,
+    "previousPoints": 1559.48,
+    "teamName": "Canada",
+    "teamCode": "CAN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CAN",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 31,
+    "points": 1565.47,
+    "previousRank": 33,
+    "previousPoints": 1540.87,
+    "teamName": "Côte d'Ivoire",
+    "teamCode": "CIV",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CIV",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 32,
+    "points": 1558.72,
+    "previousRank": 25,
+    "previousPoints": 1591.63,
+    "teamName": "Korea Republic",
+    "teamCode": "KOR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/KOR",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 33,
+    "points": 1549.29,
+    "previousRank": 32,
+    "previousPoints": 1549.29,
+    "teamName": "Ukraine",
+    "teamCode": "UKR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/UKR",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 34,
+    "points": 1542.47,
+    "previousRank": 41,
+    "previousPoints": 1505.35,
+    "teamName": "Paraguay",
+    "teamCode": "PAR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/PAR",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 35,
+    "points": 1529.6,
+    "previousRank": 35,
+    "previousPoints": 1529.6,
+    "teamName": "Russia",
+    "teamCode": "RUS",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/RUS",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 36,
+    "points": 1526.18,
+    "previousRank": 36,
+    "previousPoints": 1526.18,
+    "teamName": "Poland",
+    "teamCode": "POL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/POL",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 37,
+    "points": 1525.59,
+    "previousRank": 38,
+    "previousPoints": 1509.79,
+    "teamName": "Sweden",
+    "teamCode": "SWE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SWE",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 38,
+    "points": 1516.95,
+    "previousRank": 37,
+    "previousPoints": 1516.95,
+    "teamName": "Wales",
+    "teamCode": "WAL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/WAL",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 39,
+    "points": 1506.39,
+    "previousRank": 39,
+    "previousPoints": 1506.39,
+    "teamName": "Hungary",
+    "teamCode": "HUN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/HUN",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 40,
+    "points": 1502.13,
+    "previousRank": 43,
+    "previousPoints": 1502.13,
+    "teamName": "Serbia",
+    "teamCode": "SRB",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SRB",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 41,
+    "points": 1495.49,
+    "previousRank": 46,
+    "previousPoints": 1474.43,
+    "teamName": "Congo DR",
+    "teamCode": "COD",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/COD",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 42,
+    "points": 1491.23,
+    "previousRank": 42,
+    "previousPoints": 1503.34,
+    "teamName": "Scotland",
+    "teamCode": "SCO",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SCO",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 43,
+    "points": 1481.24,
+    "previousRank": 44,
+    "previousPoints": 1481.24,
+    "teamName": "Cameroon",
+    "teamCode": "CMR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CMR",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 44,
+    "points": 1478.42,
+    "previousRank": 34,
+    "previousPoints": 1539.16,
+    "teamName": "Panama",
+    "teamCode": "PAN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/PAN",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 45,
+    "points": 1473.66,
+    "previousRank": 47,
+    "previousPoints": 1473.66,
+    "teamName": "Slovakia",
+    "teamCode": "SVK",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SVK",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 46,
+    "points": 1473.19,
+    "previousRank": 48,
+    "previousPoints": 1473.19,
+    "teamName": "Greece",
+    "teamCode": "GRE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GRE",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 47,
+    "points": 1469.18,
+    "previousRank": 49,
+    "previousPoints": 1469.18,
+    "teamName": "Venezuela",
+    "teamCode": "VEN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/VEN",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 48,
+    "points": 1467.25,
+    "previousRank": 40,
+    "previousPoints": 1505.74,
+    "teamName": "Czechia",
+    "teamCode": "CZE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CZE",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 49,
+    "points": 1458.2,
+    "previousRank": 51,
+    "previousPoints": 1458.2,
+    "teamName": "Chile",
+    "teamCode": "CHI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CHI",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 50,
+    "points": 1457.69,
+    "previousRank": 52,
+    "previousPoints": 1457.69,
+    "teamName": "Peru",
+    "teamCode": "PER",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/PER",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 51,
+    "points": 1456.03,
+    "previousRank": 53,
+    "previousPoints": 1456.03,
+    "teamName": "Costa Rica",
+    "teamCode": "CRC",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CRC",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 52,
+    "points": 1455.89,
+    "previousRank": 54,
+    "previousPoints": 1455.89,
+    "teamName": "Romania",
+    "teamCode": "ROU",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ROU",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 53,
+    "points": 1455.59,
+    "previousRank": 55,
+    "previousPoints": 1455.59,
+    "teamName": "Mali",
+    "teamCode": "MLI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MLI",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 54,
+    "points": 1451.25,
+    "previousRank": 60,
+    "previousPoints": 1428.38,
+    "teamName": "South Africa",
+    "teamCode": "RSA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/RSA",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 55,
+    "points": 1441.1,
+    "previousRank": 58,
+    "previousPoints": 1441.1,
+    "teamName": "Republic of Ireland",
+    "teamCode": "IRL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/IRL",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 56,
+    "points": 1441.09,
+    "previousRank": 59,
+    "previousPoints": 1441.09,
+    "teamName": "Slovenia",
+    "teamCode": "SVN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SVN",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 57,
+    "points": 1426.59,
+    "previousRank": 45,
+    "previousPoints": 1476.41,
+    "teamName": "Tunisia",
+    "teamCode": "TUN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TUN",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 58,
+    "points": 1425.52,
+    "previousRank": 61,
+    "previousPoints": 1423.88,
+    "teamName": "Saudi Arabia",
+    "teamCode": "KSA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/KSA",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 59,
+    "points": 1411.07,
+    "previousRank": 56,
+    "previousPoints": 1450.31,
+    "teamName": "Qatar",
+    "teamCode": "QAT",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/QAT",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 60,
+    "points": 1409.73,
+    "previousRank": 50,
+    "previousPoints": 1458.73,
+    "teamName": "Uzbekistan",
+    "teamCode": "UZB",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/UZB",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 61,
+    "points": 1408.94,
+    "previousRank": 64,
+    "previousPoints": 1387.22,
+    "teamName": "Bosnia and Herzegovina",
+    "teamCode": "BIH",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BIH",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 62,
+    "points": 1406.99,
+    "previousRank": 62,
+    "previousPoints": 1406.99,
+    "teamName": "Burkina Faso",
+    "teamCode": "BFA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BFA",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 63,
+    "points": 1404.17,
+    "previousRank": 57,
+    "previousPoints": 1446.28,
+    "teamName": "Iraq",
+    "teamCode": "IRQ",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/IRQ",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 64,
+    "points": 1402.97,
+    "previousRank": 67,
+    "previousPoints": 1371.11,
+    "teamName": "Cabo Verde",
+    "teamCode": "CPV",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CPV",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 65,
+    "points": 1387,
+    "previousRank": 73,
+    "previousPoints": 1346.88,
+    "teamName": "Ghana",
+    "teamCode": "GHA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GHA",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 66,
+    "points": 1378.97,
+    "previousRank": 65,
+    "previousPoints": 1378.97,
+    "teamName": "Honduras",
+    "teamCode": "HON",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/HON",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 67,
+    "points": 1376.03,
+    "previousRank": 66,
+    "previousPoints": 1376.03,
+    "teamName": "Albania",
+    "teamCode": "ALB",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ALB",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 68,
+    "points": 1370.47,
+    "previousRank": 68,
+    "previousPoints": 1370.47,
+    "teamName": "United Arab Emirates",
+    "teamCode": "UAE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/UAE",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 69,
+    "points": 1369.16,
+    "previousRank": 69,
+    "previousPoints": 1369.16,
+    "teamName": "North Macedonia",
+    "teamCode": "MKD",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MKD",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 70,
+    "points": 1365.3,
+    "previousRank": 70,
+    "previousPoints": 1365.3,
+    "teamName": "Northern Ireland",
+    "teamCode": "NIR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NIR",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 71,
+    "points": 1357.84,
+    "previousRank": 71,
+    "previousPoints": 1357.84,
+    "teamName": "Jamaica",
+    "teamCode": "JAM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/JAM",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 72,
+    "points": 1355.26,
+    "previousRank": 72,
+    "previousPoints": 1355.26,
+    "teamName": "Georgia",
+    "teamCode": "GEO",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GEO",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 73,
+    "points": 1350.41,
+    "previousRank": 63,
+    "previousPoints": 1387.74,
+    "teamName": "Jordan",
+    "teamCode": "JOR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/JOR",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 74,
+    "points": 1342.77,
+    "previousRank": 74,
+    "previousPoints": 1342.77,
+    "teamName": "Iceland",
+    "teamCode": "ISL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ISL",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 75,
+    "points": 1341.92,
+    "previousRank": 75,
+    "previousPoints": 1341.92,
+    "teamName": "Finland",
+    "teamCode": "FIN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/FIN",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 76,
+    "points": 1333.9,
+    "previousRank": 76,
+    "previousPoints": 1333.9,
+    "teamName": "Israel",
+    "teamCode": "ISR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ISR",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 77,
+    "points": 1326,
+    "previousRank": 77,
+    "previousPoints": 1326,
+    "teamName": "Bolivia",
+    "teamCode": "BOL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BOL",
+    "confederation": "CONMEBOL"
+  },
+  {
+    "rank": 78,
+    "points": 1319.12,
+    "previousRank": 78,
+    "previousPoints": 1319.12,
+    "teamName": "Kosovo",
+    "teamCode": "KOS",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/KOS",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 79,
+    "points": 1306.9,
+    "previousRank": 79,
+    "previousPoints": 1306.9,
+    "teamName": "Oman",
+    "teamCode": "OMA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/OMA",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 80,
+    "points": 1301.98,
+    "previousRank": 80,
+    "previousPoints": 1301.98,
+    "teamName": "Montenegro",
+    "teamCode": "MNE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MNE",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 81,
+    "points": 1295.6,
+    "previousRank": 81,
+    "previousPoints": 1295.6,
+    "teamName": "Guinea",
+    "teamCode": "GUI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GUI",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 82,
+    "points": 1285.65,
+    "previousRank": 82,
+    "previousPoints": 1294.77,
+    "teamName": "Curaçao",
+    "teamCode": "CUW",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CUW",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 83,
+    "points": 1283.05,
+    "previousRank": 84,
+    "previousPoints": 1283.05,
+    "teamName": "Syria",
+    "teamCode": "SYR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SYR",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 84,
+    "points": 1272.51,
+    "previousRank": 86,
+    "previousPoints": 1272.51,
+    "teamName": "Gabon",
+    "teamCode": "GAB",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GAB",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 85,
+    "points": 1271.68,
+    "previousRank": 87,
+    "previousPoints": 1271.68,
+    "teamName": "Bulgaria",
+    "teamCode": "BUL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BUL",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 86,
+    "points": 1269.8,
+    "previousRank": 85,
+    "previousPoints": 1275.58,
+    "teamName": "New Zealand",
+    "teamCode": "NZL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NZL",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 87,
+    "points": 1265.58,
+    "previousRank": 88,
+    "previousPoints": 1265.58,
+    "teamName": "Angola",
+    "teamCode": "ANG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ANG",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 88,
+    "points": 1264.58,
+    "previousRank": 83,
+    "previousPoints": 1293.1,
+    "teamName": "Haiti",
+    "teamCode": "HAI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/HAI",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 89,
+    "points": 1264.09,
+    "previousRank": 89,
+    "previousPoints": 1264.09,
+    "teamName": "Uganda",
+    "teamCode": "UGA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/UGA",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 90,
+    "points": 1255.82,
+    "previousRank": 90,
+    "previousPoints": 1255.82,
+    "teamName": "Zambia",
+    "teamCode": "ZAM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ZAM",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 91,
+    "points": 1254.81,
+    "previousRank": 91,
+    "previousPoints": 1254.81,
+    "teamName": "China PR",
+    "teamCode": "CHN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CHN",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 92,
+    "points": 1254.41,
+    "previousRank": 92,
+    "previousPoints": 1254.41,
+    "teamName": "Bahrain",
+    "teamCode": "BHR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BHR",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 93,
+    "points": 1252.17,
+    "previousRank": 93,
+    "previousPoints": 1252.17,
+    "teamName": "Benin",
+    "teamCode": "BEN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BEN",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 94,
+    "points": 1250.8,
+    "previousRank": 94,
+    "previousPoints": 1250.8,
+    "teamName": "Thailand",
+    "teamCode": "THA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/THA",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 95,
+    "points": 1243.71,
+    "previousRank": 95,
+    "previousPoints": 1243.71,
+    "teamName": "Palestine",
+    "teamCode": "PLE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/PLE",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 96,
+    "points": 1242.88,
+    "previousRank": 96,
+    "previousPoints": 1242.88,
+    "teamName": "Belarus",
+    "teamCode": "BLR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BLR",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 97,
+    "points": 1238.74,
+    "previousRank": 97,
+    "previousPoints": 1238.74,
+    "teamName": "Guatemala",
+    "teamCode": "GUA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GUA",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 98,
+    "points": 1232.82,
+    "previousRank": 98,
+    "previousPoints": 1232.82,
+    "teamName": "Luxembourg",
+    "teamCode": "LUX",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LUX",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 99,
+    "points": 1225.68,
+    "previousRank": 99,
+    "previousPoints": 1225.68,
+    "teamName": "Vietnam",
+    "teamCode": "VIE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/VIE",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 100,
+    "points": 1225.34,
+    "previousRank": 100,
+    "previousPoints": 1225.34,
+    "teamName": "El Salvador",
+    "teamCode": "SLV",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SLV",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 101,
+    "points": 1224.19,
+    "previousRank": 101,
+    "previousPoints": 1224.19,
+    "teamName": "Tajikistan",
+    "teamCode": "TJK",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TJK",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 102,
+    "points": 1219.59,
+    "previousRank": 102,
+    "previousPoints": 1219.59,
+    "teamName": "Trinidad and Tobago",
+    "teamCode": "TRI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TRI",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 103,
+    "points": 1218.62,
+    "previousRank": 103,
+    "previousPoints": 1218.62,
+    "teamName": "Mozambique",
+    "teamCode": "MOZ",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MOZ",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 104,
+    "points": 1202.69,
+    "previousRank": 104,
+    "previousPoints": 1202.69,
+    "teamName": "Madagascar",
+    "teamCode": "MAD",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MAD",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 105,
+    "points": 1195.2,
+    "previousRank": 105,
+    "previousPoints": 1195.2,
+    "teamName": "Equatorial Guinea",
+    "teamCode": "EQG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/EQG",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 106,
+    "points": 1192.16,
+    "previousRank": 106,
+    "previousPoints": 1192.16,
+    "teamName": "Kyrgyz Republic",
+    "teamCode": "KGZ",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/KGZ",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 107,
+    "points": 1189.63,
+    "previousRank": 107,
+    "previousPoints": 1189.63,
+    "teamName": "Armenia",
+    "teamCode": "ARM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ARM",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 108,
+    "points": 1187.91,
+    "previousRank": 108,
+    "previousPoints": 1187.91,
+    "teamName": "Comoros",
+    "teamCode": "COM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/COM",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 109,
+    "points": 1185.08,
+    "previousRank": 109,
+    "previousPoints": 1185.08,
+    "teamName": "Kenya",
+    "teamCode": "KEN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/KEN",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 110,
+    "points": 1182.08,
+    "previousRank": 110,
+    "previousPoints": 1182.08,
+    "teamName": "Libya",
+    "teamCode": "LBY",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LBY",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 111,
+    "points": 1180.78,
+    "previousRank": 111,
+    "previousPoints": 1180.78,
+    "teamName": "Kazakhstan",
+    "teamCode": "KAZ",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/KAZ",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 112,
+    "points": 1180.27,
+    "previousRank": 112,
+    "previousPoints": 1180.27,
+    "teamName": "Tanzania",
+    "teamCode": "TAN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TAN",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 113,
+    "points": 1176.68,
+    "previousRank": 113,
+    "previousPoints": 1176.68,
+    "teamName": "Mauritania",
+    "teamCode": "MTN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MTN",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 114,
+    "points": 1175.33,
+    "previousRank": 114,
+    "previousPoints": 1175.33,
+    "teamName": "Niger",
+    "teamCode": "NIG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NIG",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 115,
+    "points": 1172.22,
+    "previousRank": 115,
+    "previousPoints": 1172.22,
+    "teamName": "Lebanon",
+    "teamCode": "LBN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LBN",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 116,
+    "points": 1159.64,
+    "previousRank": 116,
+    "previousPoints": 1159.64,
+    "teamName": "The Gambia",
+    "teamCode": "GAM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GAM",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 117,
+    "points": 1157.22,
+    "previousRank": 117,
+    "previousPoints": 1157.22,
+    "teamName": "Sudan",
+    "teamCode": "SDN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SDN",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 118,
+    "points": 1157.14,
+    "previousRank": 118,
+    "previousPoints": 1157.14,
+    "teamName": "Indonesia",
+    "teamCode": "IDN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/IDN",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 119,
+    "points": 1152.76,
+    "previousRank": 119,
+    "previousPoints": 1152.76,
+    "teamName": "Togo",
+    "teamCode": "TOG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TOG",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 120,
+    "points": 1151.05,
+    "previousRank": 120,
+    "previousPoints": 1151.05,
+    "teamName": "DPR Korea",
+    "teamCode": "PRK",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/PRK",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 121,
+    "points": 1148.84,
+    "previousRank": 121,
+    "previousPoints": 1148.84,
+    "teamName": "Namibia",
+    "teamCode": "NAM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NAM",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 122,
+    "points": 1147.56,
+    "previousRank": 122,
+    "previousPoints": 1147.56,
+    "teamName": "Sierra Leone",
+    "teamCode": "SLE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SLE",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 123,
+    "points": 1136.59,
+    "previousRank": 123,
+    "previousPoints": 1136.59,
+    "teamName": "Faroe Islands",
+    "teamCode": "FRO",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/FRO",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 124,
+    "points": 1133.25,
+    "previousRank": 124,
+    "previousPoints": 1133.25,
+    "teamName": "Cyprus",
+    "teamCode": "CYP",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CYP",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 125,
+    "points": 1132.43,
+    "previousRank": 125,
+    "previousPoints": 1132.43,
+    "teamName": "Suriname",
+    "teamCode": "SUR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SUR",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 126,
+    "points": 1132,
+    "previousRank": 126,
+    "previousPoints": 1132,
+    "teamName": "Azerbaijan",
+    "teamCode": "AZE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/AZE",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 127,
+    "points": 1130.64,
+    "previousRank": 127,
+    "previousPoints": 1130.64,
+    "teamName": "Estonia",
+    "teamCode": "EST",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/EST",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 128,
+    "points": 1126.62,
+    "previousRank": 128,
+    "previousPoints": 1126.62,
+    "teamName": "Rwanda",
+    "teamCode": "RWA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/RWA",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 129,
+    "points": 1122.05,
+    "previousRank": 129,
+    "previousPoints": 1122.05,
+    "teamName": "Malawi",
+    "teamCode": "MWI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MWI",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 130,
+    "points": 1119.78,
+    "previousRank": 130,
+    "previousPoints": 1119.78,
+    "teamName": "Zimbabwe",
+    "teamCode": "ZIM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ZIM",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 131,
+    "points": 1114.63,
+    "previousRank": 131,
+    "previousPoints": 1114.63,
+    "teamName": "Nicaragua",
+    "teamCode": "NCA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NCA",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 132,
+    "points": 1108.38,
+    "previousRank": 132,
+    "previousPoints": 1108.38,
+    "teamName": "Guinea-Bissau",
+    "teamCode": "GNB",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GNB",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 133,
+    "points": 1106.47,
+    "previousRank": 133,
+    "previousPoints": 1106.47,
+    "teamName": "Kuwait",
+    "teamCode": "KUW",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/KUW",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 134,
+    "points": 1105.96,
+    "previousRank": 134,
+    "previousPoints": 1105.96,
+    "teamName": "Congo",
+    "teamCode": "CGO",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CGO",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 135,
+    "points": 1100.95,
+    "previousRank": 135,
+    "previousPoints": 1100.95,
+    "teamName": "Philippines",
+    "teamCode": "PHI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/PHI",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 136,
+    "points": 1086.22,
+    "previousRank": 136,
+    "previousPoints": 1086.22,
+    "teamName": "Malaysia",
+    "teamCode": "MAS",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MAS",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 137,
+    "points": 1085.66,
+    "previousRank": 137,
+    "previousPoints": 1085.66,
+    "teamName": "Latvia",
+    "teamCode": "LVA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LVA",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 138,
+    "points": 1084.93,
+    "previousRank": 138,
+    "previousPoints": 1084.93,
+    "teamName": "India",
+    "teamCode": "IND",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/IND",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 139,
+    "points": 1080.82,
+    "previousRank": 139,
+    "previousPoints": 1080.82,
+    "teamName": "Central African Republic",
+    "teamCode": "CTA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CTA",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 140,
+    "points": 1080.44,
+    "previousRank": 140,
+    "previousPoints": 1080.44,
+    "teamName": "Liberia",
+    "teamCode": "LBR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LBR",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 141,
+    "points": 1078.65,
+    "previousRank": 141,
+    "previousPoints": 1078.65,
+    "teamName": "Turkmenistan",
+    "teamCode": "TKM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TKM",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 142,
+    "points": 1078.01,
+    "previousRank": 142,
+    "previousPoints": 1078.01,
+    "teamName": "Burundi",
+    "teamCode": "BDI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BDI",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 143,
+    "points": 1077.52,
+    "previousRank": 143,
+    "previousPoints": 1077.52,
+    "teamName": "Ethiopia",
+    "teamCode": "ETH",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ETH",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 144,
+    "points": 1076.5,
+    "previousRank": 144,
+    "previousPoints": 1076.5,
+    "teamName": "Dominican Republic",
+    "teamCode": "DOM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/DOM",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 145,
+    "points": 1065.24,
+    "previousRank": 145,
+    "previousPoints": 1065.24,
+    "teamName": "Yemen",
+    "teamCode": "YEM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/YEM",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 146,
+    "points": 1064.29,
+    "previousRank": 146,
+    "previousPoints": 1064.29,
+    "teamName": "Lesotho",
+    "teamCode": "LES",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LES",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 147,
+    "points": 1063.63,
+    "previousRank": 147,
+    "previousPoints": 1063.63,
+    "teamName": "Botswana",
+    "teamCode": "BOT",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BOT",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 148,
+    "points": 1057.95,
+    "previousRank": 148,
+    "previousPoints": 1057.95,
+    "teamName": "Singapore",
+    "teamCode": "SGP",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SGP",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 149,
+    "points": 1056.85,
+    "previousRank": 149,
+    "previousPoints": 1056.85,
+    "teamName": "Lithuania",
+    "teamCode": "LTU",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LTU",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 150,
+    "points": 1049.32,
+    "previousRank": 150,
+    "previousPoints": 1049.32,
+    "teamName": "Guyana",
+    "teamCode": "GUY",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GUY",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 151,
+    "points": 1036.95,
+    "previousRank": 151,
+    "previousPoints": 1036.95,
+    "teamName": "New Caledonia",
+    "teamCode": "NCL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NCL",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 152,
+    "points": 1036.33,
+    "previousRank": 152,
+    "previousPoints": 1036.33,
+    "teamName": "St. Kitts and Nevis",
+    "teamCode": "SKN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SKN",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 153,
+    "points": 1031.89,
+    "previousRank": 153,
+    "previousPoints": 1031.89,
+    "teamName": "Solomon Islands",
+    "teamCode": "SOL",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SOL",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 154,
+    "points": 1024.3,
+    "previousRank": 154,
+    "previousPoints": 1024.3,
+    "teamName": "Puerto Rico",
+    "teamCode": "PUR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/PUR",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 155,
+    "points": 1024.17,
+    "previousRank": 155,
+    "previousPoints": 1024.17,
+    "teamName": "Fiji",
+    "teamCode": "FIJ",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/FIJ",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 156,
+    "points": 1024.16,
+    "previousRank": 156,
+    "previousPoints": 1024.16,
+    "teamName": "Hong Kong",
+    "teamCode": "HKG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/HKG",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 157,
+    "points": 1019.04,
+    "previousRank": 157,
+    "previousPoints": 1019.04,
+    "teamName": "Tahiti",
+    "teamCode": "TAH",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TAH",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 158,
+    "points": 1010.91,
+    "previousRank": 158,
+    "previousPoints": 1010.91,
+    "teamName": "Myanmar",
+    "teamCode": "MYA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MYA",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 159,
+    "points": 1008.24,
+    "previousRank": 159,
+    "previousPoints": 1008.24,
+    "teamName": "Moldova",
+    "teamCode": "MDA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MDA",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 160,
+    "points": 1002.53,
+    "previousRank": 160,
+    "previousPoints": 1002.53,
+    "teamName": "Vanuatu",
+    "teamCode": "VAN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/VAN",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 161,
+    "points": 992.79,
+    "previousRank": 161,
+    "previousPoints": 992.79,
+    "teamName": "Malta",
+    "teamCode": "MLT",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MLT",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 162,
+    "points": 986.58,
+    "previousRank": 162,
+    "previousPoints": 986.58,
+    "teamName": "Antigua and Barbuda",
+    "teamCode": "ATG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ATG",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 163,
+    "points": 981.82,
+    "previousRank": 163,
+    "previousPoints": 981.82,
+    "teamName": "Grenada",
+    "teamCode": "GRN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GRN",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 164,
+    "points": 981.42,
+    "previousRank": 164,
+    "previousPoints": 981.42,
+    "teamName": "Cuba",
+    "teamCode": "CUB",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CUB",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 165,
+    "points": 979.01,
+    "previousRank": 165,
+    "previousPoints": 979.01,
+    "teamName": "Eswatini",
+    "teamCode": "SWZ",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SWZ",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 166,
+    "points": 976.71,
+    "previousRank": 166,
+    "previousPoints": 976.71,
+    "teamName": "St. Lucia",
+    "teamCode": "LCA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LCA",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 167,
+    "points": 975.05,
+    "previousRank": 167,
+    "previousPoints": 975.05,
+    "teamName": "Bermuda",
+    "teamCode": "BER",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BER",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 168,
+    "points": 974.9,
+    "previousRank": 168,
+    "previousPoints": 974.9,
+    "teamName": "Papua New Guinea",
+    "teamCode": "PNG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/PNG",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 169,
+    "points": 970.94,
+    "previousRank": 169,
+    "previousPoints": 970.94,
+    "teamName": "South Sudan",
+    "teamCode": "SSD",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SSD",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 170,
+    "points": 968.27,
+    "previousRank": 170,
+    "previousPoints": 968.27,
+    "teamName": "St. Vincent / Grenadines",
+    "teamCode": "VIN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/VIN",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 171,
+    "points": 968.07,
+    "previousRank": 171,
+    "previousPoints": 968.07,
+    "teamName": "Afghanistan",
+    "teamCode": "AFG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/AFG",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 172,
+    "points": 946.43,
+    "previousRank": 172,
+    "previousPoints": 946.43,
+    "teamName": "Andorra",
+    "teamCode": "AND",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/AND",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 173,
+    "points": 943.92,
+    "previousRank": 173,
+    "previousPoints": 943.92,
+    "teamName": "Maldives",
+    "teamCode": "MDV",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MDV",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 174,
+    "points": 923.78,
+    "previousRank": 174,
+    "previousPoints": 923.78,
+    "teamName": "Chinese Taipei",
+    "teamCode": "TPE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TPE",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 175,
+    "points": 922.32,
+    "previousRank": 175,
+    "previousPoints": 922.32,
+    "teamName": "Cambodia",
+    "teamCode": "CAM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CAM",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 176,
+    "points": 916.75,
+    "previousRank": 176,
+    "previousPoints": 916.75,
+    "teamName": "Montserrat",
+    "teamCode": "MSR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MSR",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 177,
+    "points": 914.54,
+    "previousRank": 177,
+    "previousPoints": 914.54,
+    "teamName": "Nepal",
+    "teamCode": "NEP",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/NEP",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 178,
+    "points": 911.49,
+    "previousRank": 178,
+    "previousPoints": 911.49,
+    "teamName": "Mauritius",
+    "teamCode": "MRI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MRI",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 179,
+    "points": 909.89,
+    "previousRank": 179,
+    "previousPoints": 909.89,
+    "teamName": "Barbados",
+    "teamCode": "BRB",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BRB",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 180,
+    "points": 907,
+    "previousRank": 180,
+    "previousPoints": 907,
+    "teamName": "Belize",
+    "teamCode": "BLZ",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BLZ",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 181,
+    "points": 902.93,
+    "previousRank": 181,
+    "previousPoints": 902.93,
+    "teamName": "Bangladesh",
+    "teamCode": "BAN",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BAN",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 182,
+    "points": 897.69,
+    "previousRank": 182,
+    "previousPoints": 897.69,
+    "teamName": "Dominica",
+    "teamCode": "DMA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/DMA",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 183,
+    "points": 896.85,
+    "previousRank": 183,
+    "previousPoints": 896.85,
+    "teamName": "Chad",
+    "teamCode": "CHA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CHA",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 184,
+    "points": 887.06,
+    "previousRank": 184,
+    "previousPoints": 887.06,
+    "teamName": "Eritrea",
+    "teamCode": "ERI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ERI",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 185,
+    "points": 885.03,
+    "previousRank": 185,
+    "previousPoints": 885.03,
+    "teamName": "Laos",
+    "teamCode": "LAO",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LAO",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 186,
+    "points": 877.53,
+    "previousRank": 186,
+    "previousPoints": 877.53,
+    "teamName": "Cook Islands",
+    "teamCode": "COK",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/COK",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 187,
+    "points": 876.86,
+    "previousRank": 187,
+    "previousPoints": 876.86,
+    "teamName": "Sri Lanka",
+    "teamCode": "SRI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SRI",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 188,
+    "points": 876.41,
+    "previousRank": 188,
+    "previousPoints": 876.41,
+    "teamName": "Samoa",
+    "teamCode": "SAM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SAM",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 189,
+    "points": 875.61,
+    "previousRank": 189,
+    "previousPoints": 875.61,
+    "teamName": "Aruba",
+    "teamCode": "ARU",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ARU",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 190,
+    "points": 874.47,
+    "previousRank": 190,
+    "previousPoints": 874.47,
+    "teamName": "Mongolia",
+    "teamCode": "MNG",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MNG",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 191,
+    "points": 871.61,
+    "previousRank": 191,
+    "previousPoints": 871.61,
+    "teamName": "American Samoa",
+    "teamCode": "ASA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/ASA",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 192,
+    "points": 870.81,
+    "previousRank": 192,
+    "previousPoints": 870.81,
+    "teamName": "Bhutan",
+    "teamCode": "BHU",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BHU",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 193,
+    "points": 858.03,
+    "previousRank": 193,
+    "previousPoints": 858.03,
+    "teamName": "Macau",
+    "teamCode": "MAC",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/MAC",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 194,
+    "points": 857.73,
+    "previousRank": 194,
+    "previousPoints": 857.73,
+    "teamName": "Brunei",
+    "teamCode": "BRU",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BRU",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 195,
+    "points": 855.44,
+    "previousRank": 195,
+    "previousPoints": 855.44,
+    "teamName": "São Tomé and Príncipe",
+    "teamCode": "STP",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/STP",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 196,
+    "points": 853.58,
+    "previousRank": 196,
+    "previousPoints": 853.58,
+    "teamName": "Djibouti",
+    "teamCode": "DJI",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/DJI",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 197,
+    "points": 850.06,
+    "previousRank": 197,
+    "previousPoints": 850.06,
+    "teamName": "Cayman Islands",
+    "teamCode": "CAY",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/CAY",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 198,
+    "points": 840.28,
+    "previousRank": 198,
+    "previousPoints": 840.28,
+    "teamName": "Pakistan",
+    "teamCode": "PAK",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/PAK",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 199,
+    "points": 839.17,
+    "previousRank": 199,
+    "previousPoints": 839.17,
+    "teamName": "Somalia",
+    "teamCode": "SOM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SOM",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 200,
+    "points": 835.64,
+    "previousRank": 200,
+    "previousPoints": 835.64,
+    "teamName": "Tonga",
+    "teamCode": "TGA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TGA",
+    "confederation": "OFC"
+  },
+  {
+    "rank": 201,
+    "points": 831,
+    "previousRank": 201,
+    "previousPoints": 831,
+    "teamName": "Timor-Leste",
+    "teamCode": "TLS",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TLS",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 202,
+    "points": 820.26,
+    "previousRank": 202,
+    "previousPoints": 820.26,
+    "teamName": "Gibraltar",
+    "teamCode": "GIB",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GIB",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 203,
+    "points": 819.54,
+    "previousRank": 203,
+    "previousPoints": 819.54,
+    "teamName": "Guam",
+    "teamCode": "GUM",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/GUM",
+    "confederation": "AFC"
+  },
+  {
+    "rank": 204,
+    "points": 804.16,
+    "previousRank": 204,
+    "previousPoints": 804.16,
+    "teamName": "Seychelles",
+    "teamCode": "SEY",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SEY",
+    "confederation": "CAF"
+  },
+  {
+    "rank": 205,
+    "points": 803.98,
+    "previousRank": 205,
+    "previousPoints": 803.98,
+    "teamName": "Turks and Caicos Islands",
+    "teamCode": "TCA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/TCA",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 206,
+    "points": 797.7,
+    "previousRank": 206,
+    "previousPoints": 797.7,
+    "teamName": "Liechtenstein",
+    "teamCode": "LIE",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/LIE",
+    "confederation": "UEFA"
+  },
+  {
+    "rank": 207,
+    "points": 786.82,
+    "previousRank": 207,
+    "previousPoints": 786.82,
+    "teamName": "Bahamas",
+    "teamCode": "BAH",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/BAH",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 208,
+    "points": 779.76,
+    "previousRank": 208,
+    "previousPoints": 779.76,
+    "teamName": "US Virgin Islands",
+    "teamCode": "VIR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/VIR",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 209,
+    "points": 777.41,
+    "previousRank": 209,
+    "previousPoints": 777.41,
+    "teamName": "British Virgin Islands",
+    "teamCode": "VGB",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/VGB",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 210,
+    "points": 760.25,
+    "previousRank": 210,
+    "previousPoints": 760.25,
+    "teamName": "Anguilla",
+    "teamCode": "AIA",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/AIA",
+    "confederation": "CONCACAF"
+  },
+  {
+    "rank": 211,
+    "points": 721.2,
+    "previousRank": 211,
+    "previousPoints": 721.2,
+    "teamName": "San Marino",
+    "teamCode": "SMR",
+    "flagUrl": "https://api.fifa.com/api/v3/picture/flags-sq-2/SMR",
+    "confederation": "UEFA"
+  }
+]
