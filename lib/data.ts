@@ -1,8 +1,4 @@
 // lib/data.ts
-
-import matchesJson from "@/data/matches.json";
-import teamsJson from "@/data/teams.json";
-
 export interface Team {
     rank: number;
     previousRank: number;
@@ -28,10 +24,6 @@ export interface Match {
     city: string;
     pointsApplied: boolean;
 }
-
-export const INITIAL_MATCHES: Match[] = matchesJson as Match[];
-
-export const INITIAL_TEAMS: Team[] = teamsJson as Team[];
 
 
 
