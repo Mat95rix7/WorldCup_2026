@@ -107,57 +107,62 @@ export default function Dashboard() {
   // ── Matchs filtrés + regroupés par journée ──────────────────────────────────
 
   const matchdays = useMemo(() => {
-    const dateKey = (iso: string) => iso.slice(0, 10);
-    const today = new Date().toISOString().slice(0, 10);
-    const isPlayed = (m: Match) => m.homeGoals !== null && m.awayGoals !== null;
+  const dateKey = (iso: string) => iso.slice(0, 10);
+  const today = new Date().toISOString().slice(0, 10);
+  const isPlayed = (m: Match) => m.homeGoals !== null && m.awayGoals !== null;
 
-    let filtered = matches;
-    if (groupFilter !== "ALL") {
-      filtered = filtered.filter((m) => m.group === groupFilter);
-    }
-    if (stageFilter !== "ALL") {
-      filtered = filtered.filter((m) => m.stage === stageFilter);
-    }
+  // Codes des équipes réellement connues (les matchs de phases à venir
+  // référencent parfois des équipes pas encore déterminées, ex: "1A",
+  // "W-M12", etc. — on ne veut pas les afficher tant qu'elles ne sont
+  // pas résolues vers une vraie équipe).
+  const knownTeamCodes = new Set(teams.map((t) => t.teamCode));
+  const isTeamDefined = (code: string | null | undefined) =>
+    !!code && knownTeamCodes.has(code);
 
-    const byDate = new Map<string, Match[]>();
-    for (const m of filtered) {
-      const d = dateKey(m.date);
-      if (!byDate.has(d)) byDate.set(d, []);
-      byDate.get(d)!.push(m);
-    }
+  let filtered = matches.filter(
+    (m) => isTeamDefined(m.homeTeam) && isTeamDefined(m.awayTeam)
+  );
 
-    // Une journée est considérée "en attente" (donc pas "past") si au moins
-    // un de ses matchs n'a pas encore de score saisi — même si la date est
-    // dépassée. Ça évite qu'un match passé mais non renseigné disparaisse
-    // en bas de la liste : il reste classé avec les matchs à venir.
-    const dayStatus = (date: string, dayMatches: Match[]): "past" | "today" | "upcoming" => {
-      const hasUnplayed = dayMatches.some((m) => !isPlayed(m));
-      if (date === today) return "today";
-      if (date < today) return hasUnplayed ? "upcoming" : "past";
-      return "upcoming";
-    };
+  if (groupFilter !== "ALL") {
+    filtered = filtered.filter((m) => m.group === groupFilter);
+  }
+  if (stageFilter !== "ALL") {
+    filtered = filtered.filter((m) => m.stage === stageFilter);
+  }
 
-    const statusRank = (status: "past" | "today" | "upcoming") =>
-      status === "today" ? 0 : status === "upcoming" ? 1 : 2; // today, puis à venir/en attente, puis terminés
+  const byDate = new Map<string, Match[]>();
+  for (const m of filtered) {
+    const d = dateKey(m.date);
+    if (!byDate.has(d)) byDate.set(d, []);
+    byDate.get(d)!.push(m);
+  }
 
-    return Array.from(byDate.entries())
-      .map(([date, dayMatches]) => ({
-        date,
-        matches: dayMatches.sort(
-          (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-        ),
-        status: dayStatus(date, dayMatches),
-      }))
-      .sort((a, b) => {
-        const rankA = statusRank(a.status);
-        const rankB = statusRank(b.status);
-        if (rankA !== rankB) return rankA - rankB;
-        // à venir/en attente : du plus proche (ou plus ancien en retard) au plus loin
-        // terminés : du plus récent au plus ancien
-        return rankA === 2 ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date);
-      })
-      .map((day, idx) => ({ ...day, index: idx + 1 }));
-  }, [matches, groupFilter, stageFilter]);
+  const dayStatus = (date: string, dayMatches: Match[]): "past" | "today" | "upcoming" => {
+    const hasUnplayed = dayMatches.some((m) => !isPlayed(m));
+    if (date === today) return "today";
+    if (date < today) return hasUnplayed ? "upcoming" : "past";
+    return "upcoming";
+  };
+
+  const statusRank = (status: "past" | "today" | "upcoming") =>
+    status === "today" ? 0 : status === "upcoming" ? 1 : 2;
+
+  return Array.from(byDate.entries())
+    .map(([date, dayMatches]) => ({
+      date,
+      matches: dayMatches.sort(
+        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+      ),
+      status: dayStatus(date, dayMatches),
+    }))
+    .sort((a, b) => {
+      const rankA = statusRank(a.status);
+      const rankB = statusRank(b.status);
+      if (rankA !== rankB) return rankA - rankB;
+      return rankA === 2 ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date);
+    })
+    .map((day, idx) => ({ ...day, index: idx + 1 }));
+}, [matches, groupFilter, stageFilter, teams]); // ← ajout de `teams` en dépendance
 
   // ── Saisie de score ────────────────────────────────────────────────────────
 
@@ -190,10 +195,30 @@ export default function Dashboard() {
       // Fix : la route PATCH /api/matches renvoie `rankings`, pas `teams`.
       // Avant, `data.teams` était toujours `undefined` et le classement FIFA
       // affiché ne se mettait donc jamais à jour après une saisie de score.
-      const data: { match: Match; rankings: Team[] | null; warning: string | null } =
-        await res.json();
+      const data: {
+        match: Match;
+        resolvedMatches?: Match[];
+        rankings: Team[] | null;
+        warning: string | null;
+      } = await res.json();
 
-      setMatches((prev) => prev.map((m) => (m.id === matchId ? data.match : m)));
+      // Fix : le bracket (useMemo basé sur `matches`) ne se mettait à jour
+      // qu'après un rechargement de page. En cause : on ne fusionnait dans
+      // le state que le match édité (`data.match`), alors que la propagation
+      // du bracket côté serveur (fillBracket) modifie aussi d'autres matchs
+      // — typiquement le match du tour suivant, dont le code équipe
+      // placeholder (ex: "W-M12") est résolu vers le vrai vainqueur. Ces
+      // matchs-là arrivent maintenant dans `data.resolvedMatches` et sont
+      // fusionnés ici, donc `matches` change de référence et `bracket`
+      // se recalcule immédiatement, sans reload.
+      setMatches((prev) => {
+        const byId = new Map(prev.map((m) => [m.id, m]));
+        byId.set(matchId, data.match);
+        for (const m of data.resolvedMatches ?? []) {
+          byId.set(m.id, m);
+        }
+        return Array.from(byId.values());
+      });
       if (data.rankings) setTeams(data.rankings);
       if (data.warning) setSaveError(data.warning);
     },

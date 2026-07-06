@@ -23,4 +23,5 @@ export interface Match {
     penaltyWinner: "HOME" | "AWAY" | null;
     city: string;
     pointsApplied: boolean;
+    winnerCode: string | null;
 }

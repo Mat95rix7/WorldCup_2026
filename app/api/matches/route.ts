@@ -147,24 +147,38 @@ export async function PATCH(request: NextRequest) {
     }
 
     /* ------------------ Bracket propagation ------------------ */
-    const resolvedMatches = fillBracket(allMatches);
+    // On construit la version à jour du match courant AVANT de calculer le bracket.
+    // Sans ça, fillBracket travaille sur les anciennes données (allMatches a été lu
+    // avant cette mise à jour) et le match courant se retrouve réécrit avec son
+    // ancien score à la fin du batch, écrasant la mise à jour.
+    const updatedMatch: Match = {
+      ...match,
+      id,
+      homeGoals,
+      awayGoals,
+      penaltyWinner: penaltyWinner ?? null,
+      pointsApplied: nowComplete ? true : false,
+      winnerCode,
+    };
+
+    const mergedMatches = allMatches.map((m) =>
+      m.id === id ? updatedMatch : m
+    );
+
+    const resolvedMatches = fillBracket(mergedMatches);
 
     const batch = adminDb.batch();
 
-    batch.set(
-      matchRef,
-      {
-        homeGoals,
-        awayGoals,
-        penaltyWinner: penaltyWinner ?? null,
-        pointsApplied: nowComplete ? true : false,
-        winnerCode,
-      },
-      { merge: true }
-    );
-
+    // Une seule écriture par document : resolvedMatches contient déjà
+    // la version à jour du match courant (grâce à mergedMatches ci-dessus).
     for (const m of resolvedMatches) {
       batch.set(adminDb.collection("matches").doc(m.id), m, { merge: true });
+    }
+
+    // Sécurité : si fillBracket ne renvoyait pas le match courant pour une
+    // raison quelconque, on force quand même son écriture.
+    if (!resolvedMatches.some((m) => m.id === id)) {
+      batch.set(matchRef, updatedMatch, { merge: true });
     }
 
     await batch.commit();
@@ -172,6 +186,10 @@ export async function PATCH(request: NextRequest) {
 
     return NextResponse.json({
       match: { ...match, homeGoals, awayGoals, penaltyWinner, winnerCode },
+      // Tous les matchs touchés par cette écriture (le match édité +
+      // ceux dont le bracket a propagé un nouveau vainqueur). Le client
+      // en a besoin pour mettre à jour son state sans refetch/reload.
+      resolvedMatches,
       rankings: updatedRankings,
       warning,
     });
