@@ -36,6 +36,16 @@ import { computeAllThirdPlaced } from "@/lib/third-place";
 import { NextMatchBanner } from "./NextMatchBanner";
 import { TabNav, type TabKey } from "./TabNav";
 
+type Stage =
+  | "ALL"
+  | "GROUP"
+  | "ROUND_OF_32"
+  | "ROUND_OF_16"
+  | "QUARTER"
+  | "SEMI"
+  | "THIRD_PLACE"
+  | "FINAL";
+
 // ── Composant principal ───────────────────────────────────────────────────────
 
 export default function Dashboard() {
@@ -43,8 +53,19 @@ export default function Dashboard() {
   const [teams, setTeams] = useState<Team[]>([]);
   const [activeTab, setActiveTab] = useState<TabKey>("matches");
   const [groupFilter, setGroupFilter] = useState<string>("ALL");
-  const [stageFilter, setStageFilter] = useState<"ALL" | "GROUP" | "KNOCKOUT">("ALL");
+  const [stageFilter, setStageFilter] = useState<"ALL" | Stage>("ALL");;
   const [saveError, setSaveError] = useState<string | null>(null);
+
+  const STAGE_LABELS: Record<Stage, string> = {
+    ALL: "Tous les matchs",
+    GROUP: "Phase de groupes",
+    ROUND_OF_32: "1/32e de finale",
+    ROUND_OF_16: "1/16e de finale",
+    QUARTER: "Quarts de finale",
+    SEMI: "Demi-finales",
+    THIRD_PLACE: "Match pour la 3e place",
+    FINAL: "Finale",
+  };
 
   // Chargement initial
   useEffect(() => {
@@ -91,10 +112,8 @@ export default function Dashboard() {
     if (groupFilter !== "ALL") {
       filtered = filtered.filter((m) => m.group === groupFilter);
     }
-    if (stageFilter === "GROUP") {
-      filtered = filtered.filter((m) => m.stage === "GROUP");
-    } else if (stageFilter === "KNOCKOUT") {
-      filtered = filtered.filter((m) => m.stage !== "GROUP");
+    if (stageFilter !== "ALL") {
+      filtered = filtered.filter((m) => m.stage === stageFilter);
     }
 
     const byDate = new Map<string, Match[]>();
@@ -265,12 +284,14 @@ export default function Dashboard() {
 
               <select
                 value={stageFilter}
-                onChange={(e) => setStageFilter(e.target.value as typeof stageFilter)}
-                className="flex-1 min-w-[140px] sm:flex-none px-3 py-2 rounded-xl border border-stone-200 bg-white text-sm text-stone-700 focus:outline-none focus:border-amber-400"
+                onChange={(e) => setStageFilter(e.target.value as "ALL" | Stage)}
+                className="flex-1 min-w-[160px] sm:flex-none px-3 py-2 rounded-xl border border-stone-200 bg-white text-sm text-stone-700 focus:outline-none focus:border-amber-400"
               >
-                <option value="ALL">Toutes les phases</option>
-                <option value="GROUP">Phase de groupes</option>
-                <option value="KNOCKOUT">Élimination directe</option>
+                {(Object.keys(STAGE_LABELS) as (Stage | "ALL")[]).map((stage) => (
+                  <option key={stage} value={stage}>
+                    {STAGE_LABELS[stage]}
+                  </option>
+                ))}
               </select>
 
               {(groupFilter !== "ALL" || stageFilter !== "ALL") && (

@@ -1,46 +1,39 @@
-import { db } from "@/lib/firebase";
-import {
-  collection,
-  doc,
-  getDocs,
-  writeBatch,
-  serverTimestamp,
-} from "firebase/firestore";
+import { FieldValue } from "firebase-admin/firestore";
+import { adminDb } from "@/lib/firebase-admin";
 import type { Team } from "./data";
 
 const TEAMS_COLLECTION = "teams";
 
 // ---------------------------------------------------------------------------
-// Lecture Firestore → toutes les équipes
+// Lecture Firestore → toutes les équipes (Firebase Admin)
 // ---------------------------------------------------------------------------
 
 export async function readRankings(): Promise<Team[]> {
-  const snap = await getDocs(collection(db, TEAMS_COLLECTION));
+  const snap = await adminDb.collection(TEAMS_COLLECTION).get();
 
-  return snap.docs.map((doc) => {
-    const data = doc.data();
-    return {
-      ...data,
-      teamCode: doc.id, // sécurité si jamais
-    } as Team;
-  });
+  return snap.docs.map((doc) => ({
+    ...(doc.data() as Team),
+    teamCode: doc.id,
+  }));
 }
 
 // ---------------------------------------------------------------------------
-// Écriture Firestore → batch update (1 doc par équipe)
+// Écriture Firestore → batch update (Firebase Admin)
 // ---------------------------------------------------------------------------
 
 export async function writeRankings(teams: Team[]): Promise<void> {
-  const batch = writeBatch(db);
+  const batch = adminDb.batch();
 
   for (const team of teams) {
-    const ref = doc(db, TEAMS_COLLECTION, team.teamCode);
+    const ref = adminDb
+      .collection(TEAMS_COLLECTION)
+      .doc(team.teamCode);
 
     batch.set(
       ref,
       {
         ...team,
-        updatedAt: serverTimestamp(),
+        updatedAt: FieldValue.serverTimestamp(),
       },
       { merge: true }
     );
@@ -50,7 +43,7 @@ export async function writeRankings(teams: Team[]): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
-// Helpers purs (aucun accès DB)
+// Helpers purs (aucun accès DB) — INCHANGÉS
 // ---------------------------------------------------------------------------
 
 export function findTeam(

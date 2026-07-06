@@ -1,5 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import { adminDb } from "@/lib/firebase-admin";
+import {
+  collection,
+  getDocs,
+  doc,
+  getDoc,
+  writeBatch,
+} from "firebase/firestore";
+import { db } from "@/lib/firebase";
+
 import { Match } from "@/lib/data";
 import { calculateFifaPoints, MatchImportance } from "@/lib/fifa-points";
 import { fillBracket } from "@/lib/bracket";
@@ -9,24 +17,17 @@ import {
   findTeam,
   applyMatchResult,
 } from "@/lib/rankings-store";
-import { getCached, setCached, invalidateCache } from "@/lib/cache";
-
-const MATCHES_CACHE_KEY = "matches";
-const CACHE_TTL_MS = 30_000; // 30s : ajuste selon la fréquence de mise à jour souhaitée
 
 /* -------------------------------------------------------------------------- */
 /* Helpers Firestore                                                           */
 /* -------------------------------------------------------------------------- */
 
-async function readMatches(useCache = true): Promise<Match[]> {
-  if (useCache) {
-    const cached = getCached<Match[]>(MATCHES_CACHE_KEY, CACHE_TTL_MS);
-    if (cached) return cached;
-  }
-  const snap = await adminDb.collection("matches").get();
-  const matches = snap.docs.map((d) => ({ ...(d.data() as Match), id: d.id }));
-  setCached(MATCHES_CACHE_KEY, matches);
-  return matches;
+async function readMatches(): Promise<Match[]> {
+  const snap = await getDocs(collection(db, "matches"));
+  return snap.docs.map((d) => ({
+    ...(d.data() as Match),
+    id: d.id,
+  }));
 }
 
 /* -------------------------------------------------------------------------- */
@@ -55,7 +56,7 @@ function isKnockoutStage(stage: string): boolean {
 
 export async function GET() {
   try {
-    const matches = await readMatches(); // sert le cache si dispo
+    const matches = await readMatches();
     return NextResponse.json(matches);
   } catch (err) {
     console.error(err);
@@ -79,10 +80,10 @@ export async function PATCH(request: NextRequest) {
       return NextResponse.json({ error: "id manquant." }, { status: 400 });
     }
 
-    const matchRef = adminDb.collection("matches").doc(id);
-    const matchSnap = await matchRef.get();
+    const matchRef = doc(db, "matches", id);
+    const matchSnap = await getDoc(matchRef);
 
-    if (!matchSnap.exists) {
+    if (!matchSnap.exists()) {
       return NextResponse.json(
         { error: `Match ${id} introuvable.` },
         { status: 404 }
@@ -91,6 +92,7 @@ export async function PATCH(request: NextRequest) {
 
     const match = matchSnap.data() as Match;
     const wasAlreadyApplied = match.pointsApplied === true;
+
     const nowComplete = homeGoals !== null && awayGoals !== null;
 
     let warning: string | null = null;
@@ -105,19 +107,9 @@ export async function PATCH(request: NextRequest) {
       else if (penaltyWinner === "AWAY") winnerCode = match.awayTeam;
     }
 
-    const shouldApplyFifaPoints =
-      nowComplete && !wasAlreadyApplied && winnerCode !== null;
-
-    /* ------------------ Lectures indépendantes en parallèle ------------------ */
-    // readRankings (si besoin) et allMatches (toujours nécessaire pour le bracket)
-    // ne dépendent pas l'une de l'autre : on les lance ensemble plutôt qu'en série.
-    const [rankings, allMatches] = await Promise.all([
-      shouldApplyFifaPoints ? readRankings() : Promise.resolve(null),
-      readMatches(false), // forcé frais : on a besoin de l'état exact avant écriture
-    ]);
-
     /* ------------------ Calcul FIFA ------------------ */
-    if (shouldApplyFifaPoints && rankings) {
+    if (nowComplete && !wasAlreadyApplied && winnerCode) {
+      const rankings = await readRankings();
       const homeTeam = findTeam(rankings, match.homeTeam);
       const awayTeam = findTeam(rankings, match.awayTeam);
 
@@ -143,14 +135,17 @@ export async function PATCH(request: NextRequest) {
         await writeRankings(updatedRankings);
       }
     } else if (wasAlreadyApplied) {
-      warning = "Match déjà traité : score modifié sans recalcul FIFA.";
+      warning =
+        "Match déjà traité : score modifié sans recalcul FIFA.";
     }
 
     /* ------------------ Bracket propagation ------------------ */
+    const allMatches = await readMatches();
     const resolvedMatches = fillBracket(allMatches);
 
-    const batch = adminDb.batch();
+    const batch = writeBatch(db);
 
+    // Update match courant
     batch.set(
       matchRef,
       {
@@ -163,12 +158,12 @@ export async function PATCH(request: NextRequest) {
       { merge: true }
     );
 
+    // Update matchs suivants (Wxx)
     for (const m of resolvedMatches) {
-      batch.set(adminDb.collection("matches").doc(m.id), m, { merge: true });
+      batch.set(doc(db, "matches", m.id), m, { merge: true });
     }
 
     await batch.commit();
-    invalidateCache(MATCHES_CACHE_KEY); // le cache GET doit refléter le nouvel état
 
     return NextResponse.json({
       match: { ...match, homeGoals, awayGoals, penaltyWinner, winnerCode },
