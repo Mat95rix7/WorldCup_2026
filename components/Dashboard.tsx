@@ -36,15 +36,7 @@ import { computeAllThirdPlaced } from "@/lib/third-place";
 import { NextMatchBanner } from "./NextMatchBanner";
 import { TabNav, type TabKey } from "./TabNav";
 
-type Stage =
-  | "ALL"
-  | "GROUP"
-  | "ROUND_OF_32"
-  | "ROUND_OF_16"
-  | "QUARTER"
-  | "SEMI"
-  | "THIRD_PLACE"
-  | "FINAL";
+
 
 // ── Composant principal ───────────────────────────────────────────────────────
 
@@ -56,6 +48,17 @@ export default function Dashboard() {
   const [stageFilter, setStageFilter] = useState<"ALL" | Stage>("ALL");;
   const [saveError, setSaveError] = useState<string | null>(null);
 
+
+  type Stage =
+    | "ALL"
+    | "GROUP"
+    | "ROUND_OF_32"
+    | "ROUND_OF_16"
+    | "QUARTER"
+    | "SEMI"
+    | "THIRD_PLACE"
+    | "FINAL";
+    
   const STAGE_LABELS: Record<Stage, string> = {
     ALL: "Tous les matchs",
     GROUP: "Phase de groupes",
