@@ -192,13 +192,13 @@ export default function FifaSimulator({ teams }: FifaSimulatorProps) {
             </div>
 
             {/* Score central */}
-            <div className="flex md:flex-col items-center justify-center gap-2 px-6 py-4 md:py-6 border-t md:border-t-0 md:border-x border-[#E1E6DA] bg-[#FAFBF8]">
+            <div className="w-full flex flex-col items-center justify-center gap-2 px-6 py-4 md:py-6 border-t md:border-t-0 md:border-x border-[#E1E6DA] bg-[#FAFBF8]">
               <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#9AA79C]">
                 Score
               </span>
               <p className="font-display text-4xl md:text-5xl font-black tabular-nums tracking-wider text-[#16241A]">
                 {homeGoals}
-                <span className="text-[#1B7A3D] mx-1">–</span>
+                <span className="text-[#232524] mx-1">–</span>
                 {awayGoals}
               </p>
             </div>

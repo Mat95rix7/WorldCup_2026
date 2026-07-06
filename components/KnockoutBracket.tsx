@@ -106,16 +106,18 @@ const TeamRow = ({
     goals,
     isWinner,
     played,
+    showPenaltiesBadge,
   }: {
     team: { teamCode: string; teamName: string; flagUrl: string } | null;
     goals: number | null;
     isWinner: boolean;
     played: boolean;
+    showPenaltiesBadge?: boolean;
   }) => (
     <div
       className={`flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors ${
         isWinner
-          ? "bg-amber-50 border border-amber-200"
+          ? "bg-amber-50 border border-amber-200 mx-1 my-1"
           : played && !isWinner
           ? "opacity-50"
           : ""
@@ -130,15 +132,27 @@ const TeamRow = ({
             loading="lazy"
           />
           <span
-            className={`flex-1 text-[14px] font-bold uppercase truncate ${
+            className={`flex-1 text-[14px] font-bold uppercase truncate hidden sm:block ${
               isWinner ? "text-amber-800" : "text-stone-700"
             }`}
           >
             {team.teamName}
           </span>
+          <span
+            className={`flex-1 text-[14px] font-bold uppercase block sm:hidden ${
+              isWinner ? "text-amber-800" : "text-stone-700"
+            }`}
+          >
+            {team.teamCode}
+          </span>
+          {showPenaltiesBadge && (
+            <span className="flex-shrink-0 text-[8px] font-black uppercase tracking-wide text-amber-700 bg-amber-200 border border-amber-300 rounded-full px-1.5 py-0.5">
+              TAB
+            </span>
+          )}
         </>
       ) : (
-        <span className="flex-1 text-[14px] text-gray-800 italic text-center">
+        <span className="flex-1 text-[14px] text-gray-800 italic text-center truncate">
           À déterminer
         </span>
       )}
@@ -158,28 +172,26 @@ function KnockoutMatchCard({ km }: { km: KnockoutMatch }) {
   const { match, homeTeamData, awayTeamData, winner, isDecidedByPenalties } = km;
   const played = match.homeGoals !== null && match.awayGoals !== null;
 
-  
+  const homeIsWinner = !!winner && winner.teamCode === match.homeTeam;
+  const awayIsWinner = !!winner && winner.teamCode === match.awayTeam;
 
   return (
     <div className="bg-orange-100 border border-stone-100 rounded-xl overflow-hidden shadow-sm">
       <TeamRow
         team={homeTeamData}
         goals={match.homeGoals}
-        isWinner={!!winner && winner.teamCode === match.homeTeam}
+        isWinner={homeIsWinner}
         played={played}
+        showPenaltiesBadge={isDecidedByPenalties && homeIsWinner}
       />
       <div className="h-px bg-gray-300 mx-2" />
       <TeamRow
         team={awayTeamData}
         goals={match.awayGoals}
-        isWinner={!!winner && winner.teamCode === match.awayTeam}
+        isWinner={awayIsWinner}
         played={played}
+        showPenaltiesBadge={isDecidedByPenalties && awayIsWinner}
       />
-      {isDecidedByPenalties && (
-        <div className="text-center py-1 bg-stone-50 text-[9px] font-bold uppercase tracking-wide text-stone-400">
-          Après TAB
-        </div>
-      )}
       <div className="h-px bg-gray-300 mx-2" />
       {!played && match.homeTeam && match.awayTeam && (
         <div className="text-center py-1 text-[9px] text-gray-800">

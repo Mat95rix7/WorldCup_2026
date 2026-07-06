@@ -39,13 +39,13 @@ const QUALIFICATION_BADGE_STYLE: Record<GroupStanding["qualified"], string> = {
 const COL = {
   rank:  "w-6 flex-shrink-0",
   team:  "flex-1 min-w-0",
-  mj:    "w-8 flex-shrink-0 text-center hidden sm:inline-block",
-  g:     "w-8 flex-shrink-0 text-center hidden sm:inline-block",
-  n:     "w-8 flex-shrink-0 text-center hidden sm:inline-block",
-  p:     "w-8 flex-shrink-0 text-center hidden sm:inline-block",
+  mj:    "w-8 flex-shrink-0 text-center",
+  g:     "w-8 flex-shrink-0 text-center hidden sm:block",
+  n:     "w-8 flex-shrink-0 text-center hidden sm:block",
+  p:     "w-8 flex-shrink-0 text-center hidden sm:block",
   diff:  "w-10 flex-shrink-0 text-center",
   pts:   "w-10 flex-shrink-0 text-center",
-  forme: "w-24 flex-shrink-0",
+  forme: "w-18 flex-shrink-0",
 };
 
 export function GroupTable({ group, standings, compact = false }: GroupTableProps) {
@@ -107,8 +107,11 @@ export function GroupTable({ group, standings, compact = false }: GroupTableProp
                 className="w-6 h-4 object-cover rounded-sm flex-shrink-0"
                 loading="lazy"
               />
-              <span className="font-semibold text-[14px] text-stone-800 truncate leading-none py-1">
+              <span className="font-semibold text-[14px] text-stone-800 truncate leading-none py-1 hidden sm:inline-block">
                 {s.team.teamName}
+              </span>
+              <span className="font-semibold text-[14px] text-stone-800 block sm:hidden">
+                {s.team.teamCode}
               </span>
               {badge && (
                 <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded shrink-0 leading-none ${badgeStyle}`}>
@@ -137,7 +140,7 @@ export function GroupTable({ group, standings, compact = false }: GroupTableProp
 
             {/* Forme */}
             {!compact && (
-              <div className={`${COL.forme} flex justify-end gap-1`}>
+              <div className={`${COL.forme} flex justify-center gap-1`}>
                 {s.form.length === 0 ? (
                   <span className="text-[11px] text-stone-300">—</span>
                 ) : (

@@ -203,7 +203,7 @@ export function FifaTable({ rankings }: { rankings: Team[] }) {
           <div
             key={team.teamCode}
             className={`flex items-center px-5 py-3 border-b border-stone-100 last:border-b-0 transition-colors hover:bg-emerald-50/40 ${
-              isPodium ? "bg-gradient-to-r from-yellow-50/60 to-transparent" : ""
+              isPodium ? "bg-linear-to-r from-yellow-50/60 to-transparent" : ""
             }`}
           >
             {/* Pos */}
@@ -223,15 +223,18 @@ export function FifaTable({ rankings }: { rankings: Team[] }) {
               <img
                 src={team.flagUrl}
                 alt={team.teamName}
-                className="w-8 h-6 object-cover rounded shadow-sm ring-1 ring-stone-200 shrink-0"
+                className="w-10 h-8 object-cover rounded shadow-sm ring-1 ring-stone-200 shrink-0"
                 loading="lazy"
               />
               <span className="min-w-0">
-                <span className="block font-semibold text-sm text-stone-800 truncate">
+                <span className="hidden sm:inline-block font-semibold text-sm text-stone-800 truncate">
                   {team.teamName}
                 </span>
+                <span className="block font-semibold text-sm text-stone-800">
+                  {team.teamCode}
+                </span>
                 <span
-                  className={`sm:hidden inline-block mt-0.5 px-1.5 py-0.5 rounded text-[9px] font-bold ${style.bg} ${style.text}`}
+                  className={`sm:hidden inline-block rounded text-[9px] font-bold ${style.bg} ${style.text}`}
                 >
                   {style.label}
                 </span>
