@@ -47,12 +47,7 @@ function getImportance(stage: string): number {
 }
 
 function isKnockoutStage(stage: string): boolean {
-  return (
-    stage === "QUARTER" ||
-    stage === "SEMI" ||
-    stage === "THIRD_PLACE" ||
-    stage === "FINAL"
-  );
+  return stage !== "GROUP";
 }
 
 /* -------------------------------------------------------------------------- */
